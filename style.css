@@ -1,0 +1,10 @@
+.box {
+    outline-style: solid;
+    outline: 1px;
+    outline-color: black;
+}
+
+container {
+    width: 500px;
+    height: 500px;
+}
