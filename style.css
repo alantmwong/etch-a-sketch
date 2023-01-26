@@ -1,3 +1,7 @@
 .box {
     float: left;
 }
+
+.box:hover {
+    background: black;
+}

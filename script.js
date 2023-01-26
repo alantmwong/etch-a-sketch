@@ -9,14 +9,14 @@ const container = document.querySelector(".container");
 container.style.width = "640px"
 container.style.height = "640px"
 
-// makeGrid function makes 
+// makeGrid function inputs the number or rows and columns for the grid
+// and makes a grid of squares. 
 makeGrid = (rows, cols) => {
     for(let i = 0; i < rows; i++) {
         for (let j = 0; j < cols; j++) {
             let div = document.createElement("div");
             div.style.width = "40px";
             div.style.height = "40px";
-            div.style.background = "white";
             div.style.outline = "1px";
             div.style.outlineColor = "black";
             div.style.outlineStyle = "solid";
