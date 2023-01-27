@@ -27,3 +27,12 @@ makeGrid = (rows, cols) => {
 }
 
 makeGrid(16, 16);
+
+// hover turns squares black and leaves a trail behind the mouse. 
+
+function hoverDiv(e){
+    e.target.style.background = "black";
+}
+
+const box = document.querySelector('div');
+box.addEventListener('mouseover', (e) => hoverDiv(e));
