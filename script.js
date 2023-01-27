@@ -34,5 +34,18 @@ function hoverDiv(e){
     e.target.style.background = "black";
 }
 
-const box = document.querySelector('div');
-box.addEventListener('mouseover', (e) => hoverDiv(e));
+const box = document.querySelector("div");
+box.addEventListener("mouseover", (e) => hoverDiv(e));
+
+// adding the function to change amount of squares in the same area grid
+const button = document.querySelector("button");
+
+button.addEventListener("click", function inputGridSize() {
+    gridSize = prompt("Please enter grid size");
+    const boxes = document.getElementsByClassName("box");
+    while(boxes.length > 0) {
+        boxes[0].parentNode.removeChild(boxes[0]);
+    }
+    makeGrid(gridSize, gridSize);
+});
+
