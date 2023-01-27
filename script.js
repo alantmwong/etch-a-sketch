@@ -15,8 +15,8 @@ makeGrid = (rows, cols) => {
     for(let i = 0; i < rows; i++) {
         for (let j = 0; j < cols; j++) {
             let div = document.createElement("div");
-            div.style.width = "40px";
-            div.style.height = "40px";
+            div.style.width = 640/rows + "px";
+            div.style.height = 640/cols + "px";
             div.style.outline = "1px";
             div.style.outlineColor = "black";
             div.style.outlineStyle = "solid";
@@ -42,6 +42,9 @@ const button = document.querySelector("button");
 
 button.addEventListener("click", function inputGridSize() {
     gridSize = prompt("Please enter grid size");
+    if (gridSize > 100) {
+        console.log("Please enter a number less than 100. ");
+    };
     const boxes = document.getElementsByClassName("box");
     while(boxes.length > 0) {
         boxes[0].parentNode.removeChild(boxes[0]);
